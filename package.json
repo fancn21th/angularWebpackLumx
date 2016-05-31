@@ -1,0 +1,17 @@
+{
+  "name": "angularWebpackLumx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "webpack --display-modules --display-chunks",
+    "dev": "webpack-dev-server --content-base src/app/ --hot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
