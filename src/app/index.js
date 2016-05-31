@@ -1,11 +1,9 @@
 require('./index.scss');
+require('../core/vendor')();
 
-class Greeting {
-    sayHello() {
-        alert("emmmmm,  hello there !");
-    }
-}
-
-const aGreeting = new Greeting();
-
-aGreeting.sayHello();
+angular.module('app', []).
+    controller('greetingCtrl',function () {
+        var vm = this,
+            message = 'aloha hongtoo!';
+        vm.greeting = `${message} and welcome`;
+    });

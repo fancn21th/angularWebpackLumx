@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: ['webpack/hot/dev-server', './src/bootstrap/bootstrap.js']
+        app: ['webpack/hot/dev-server', './src/core/bootstrap.js']
     },
     output: {
         path: __dirname + '/src/app/',
