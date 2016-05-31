@@ -1,3 +1,5 @@
+require('./index.scss');
+
 class Greeting {
     sayHello() {
         alert("emmmmm,  hello there !");
