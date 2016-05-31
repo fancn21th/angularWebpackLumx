@@ -1,6 +1,10 @@
 var webpack = require('webpack');
 
 module.exports = {
+    devServer: {
+        inline:true,
+        port: 8889
+    },
     entry: {
         app: ['webpack/hot/dev-server', './src/core/bootstrap.js']
     },
@@ -13,12 +17,27 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                loader: 'babel',
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css'
             },
             {
                 test: /\.scss$/,
                 loader: 'style!css!sass'
+            },
+            {
+                test: /\.(ttf|eot|svg|woff|woff2)(\?.+)?$/,
+                loader: 'file'
+            },
+            {
+                test: /\.html$/,
+                loader: 'html'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 };
