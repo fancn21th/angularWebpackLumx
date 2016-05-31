@@ -1,3 +1,9 @@
-/**
- * Created by fancn on 2016/5/31.
- */
+class Greeting {
+    sayHello() {
+        alert("emmmmm,  hello there !");
+    }
+}
+
+const aGreeting = new Greeting();
+
+aGreeting.sayHello();

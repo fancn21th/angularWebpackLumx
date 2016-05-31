@@ -1,2 +1,4 @@
 # angularWebpackLumx
-angular webpack lumx ui-router
+
+## Purpose
+Acting as boilerplate of angular + ui router + webpack + lumx
