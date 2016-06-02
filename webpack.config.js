@@ -1,4 +1,5 @@
-var webpack = require('webpack');
+var webpack = require('webpack'),
+    ExtractTextPlugin = require("extract-text-webpack-plugin");;
 
 var config = {
     devServer: {
@@ -21,11 +22,11 @@ var config = {
             },
             {
                 test: /\.css$/,
-                loader: 'style!css'
+                loader: ExtractTextPlugin.extract('style', 'css')
             },
             {
                 test: /\.scss$/,
-                loader: 'style!css!sass'
+                loader: ExtractTextPlugin.extract('style', 'css', 'less')
             },
             {
                 test: /\.(ttf|eot|svg|woff|woff2)(\?.+)?$/,
@@ -44,6 +45,7 @@ var config = {
             ON_DEV: process.env.npm_lifecycle_event === 'dev',
             ON_PROD: process.env.npm_lifecycle_event === 'prod'
         }),
+        new ExtractTextPlugin("app.bundle.css", {allChunks: true})
     ]
 };
 
