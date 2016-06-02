@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-dev": "webpack --display-modules --display-chunks",
-    "build-prod": "webpack --display-modules --display-chunks && cp src/app/index.html dist/index.html",
+    "build-prod": "webpack --display-modules --display-chunks --progress --colors && cp src/app/index.html dist/index.html",
     "prod": "webpack-dev-server --content-base src/app/ --hot"
   },
   "keywords": [],

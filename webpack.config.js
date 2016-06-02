@@ -50,6 +50,7 @@ var config = {
 if(process.env.npm_lifecycle_event === 'build-prod' ||
     process.env.npm_lifecycle_event === 'prod'){
     config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+    config.devtool = 'source-map';
 }
 
 if(process.env.npm_lifecycle_event === 'build-prod'){
