@@ -8,8 +8,10 @@ var libs = [
 ];
 
 angular.module(MODULE_NAME, libs).
-    controller('greetingCtrl',function () {
+    controller('greetingCtrl',function ($log) {
         var vm = this,
             message = 'aloha hongtoo!';
         vm.greeting = `${message} and welcome`;
+
+        $log.info('something has been logged!');
     });
