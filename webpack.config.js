@@ -35,6 +35,13 @@ var config = {
             {
                 test: /\.html$/,
                 loader: 'html'
+            },
+            {
+                test:   /\.(png|gif|jpe?g|svg)$/i,
+                loader: 'url',
+                query: {
+                    limit: 10000
+                }
             }
         ]
     },
@@ -48,6 +55,10 @@ var config = {
         new ExtractTextPlugin("app.bundle.css", {allChunks: true})
     ]
 };
+
+if(process.env.npm_lifecycle_event === 'dev'){
+    config.devtool = 'source-map';
+}
 
 if(process.env.npm_lifecycle_event === 'build-prod' ||
     process.env.npm_lifecycle_event === 'prod'){

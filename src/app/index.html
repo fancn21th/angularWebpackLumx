@@ -7,12 +7,60 @@
 </head>
 <body ng-app="app">
 
-<lx-button lx-type="raised">Button</lx-button>
-<lx-button lx-type="flat">Button</lx-button>
-<lx-button lx-type="fab"><i class="mdi mdi-plus"></i></lx-button>
-<lx-button lx-type="icon"><i class="mdi mdi-plus"></i></lx-button>
+<!--Top Tool Bar-->
+<div class="toolbar">
+    <div class="toolbar__left mr++">
+        <lx-button lx-size="l" lx-color="black" lx-type="icon"><i class="mdi mdi-menu"></i></lx-button>
+    </div>
+    <span class="toolbar__label fs-title">术语表</span>
 
-<h1 class="index" ng-controller="greetingCtrl as vm">{{vm.greeting}}</h1>
+    <div class="toolbar__right">
+        <lx-search-filter lx-closed="true">
+            <input type="text">
+        </lx-search-filter>
+
+        <lx-dropdown lx-position="right" lx-over-toggle="true">
+            <lx-dropdown-toggle>
+                <lx-button lx-size="l" lx-color="black" lx-type="icon"><i class="mdi mdi-dots-vertical"></i></lx-button>
+            </lx-dropdown-toggle>
+
+            <lx-dropdown-menu>
+                <ul>
+                    <li><a class="dropdown-link">Action</a></li>
+                    <li><a class="dropdown-link">Another action</a></li>
+                    <li><a class="dropdown-link">Something else here</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-link dropdown-link--is-header">Header</a></li>
+                    <li><a class="dropdown-link">Separated link</a></li>
+                </ul>
+            </lx-dropdown-menu>
+        </lx-dropdown>
+    </div>
+</div>
+
+<!--root element-->
+<ui-view></ui-view>
+
+<!--debugger for ui router-->
+<div class="p+">
+    <div class="card">
+        <div class="p+">
+            <strong class="fs-headline display-block">状态调试</strong>
+            <span class="fs-subhead tc-black-2 display-block">for ui router</span>
+
+            <div class="paragraph fs-body-1 mt+">
+                <pre>
+                    <!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
+                    $state = {{$state.current.name}}
+                    $stateParams = {{$stateParams}}
+                    $state full url = {{ $state.$current.url.source }}
+                    <!-- $state.$current is not a public api, we are using it to
+                         display the full url for learning purposes-->
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="app.bundle.js"></script>
 </body>
