@@ -1,5 +1,8 @@
 import './glossaryFilter.scss';
 import angular from 'angular';
+var glossaryTable = require('./glossaryTable/glossaryTable').default;
+
+console.log(glossaryTable);
 
 class glossaryFilter{
     constructor(){
@@ -7,7 +10,11 @@ class glossaryFilter{
     }
 }
 
-export default angular.module('glossary.glossaryFilter', [])
+let libs = [
+    glossaryTable
+];
+
+export default angular.module('glossary.glossaryFilter', libs)
     .config(function ($stateProvider) {
         $stateProvider.state('glossary.glossaryFilter', {
             url: '/glossaryFilter',
