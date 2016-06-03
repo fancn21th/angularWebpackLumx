@@ -7,6 +7,15 @@ console.log(glossaryTable);
 class glossaryFilter{
     constructor(){
         var vm = this;
+        vm.categories = [];
+        vm.categories.push({
+            title: '组件',
+            description: '组件是应用业务的基础组成单元'
+        });
+        vm.categories.push({
+            title: '组件',
+            description: '组件是应用业务的基础组成单元'
+        });
     }
 }
 

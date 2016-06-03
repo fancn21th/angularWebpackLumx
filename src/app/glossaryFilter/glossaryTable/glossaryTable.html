@@ -1,4 +1,5 @@
 <div class="data-table-container">
+    <!-- Table Header -->
     <header class="data-table-header">
         <div class="data-table-header__label">
             <span class="fs-title">术语项目列表</span>
@@ -29,46 +30,31 @@
             </lx-dropdown>
         </div>
     </header>
-
+    <!-- Table -->
     <table class="data-table">
         <thead>
         <tr class="data-table__selectable-row">
             <th></th>
-            <th>Dessert</th>
-            <th>Calories</th>
-            <th>Fat (g)</th>
-            <th class="data-table__sortable-cell data-table__sortable-cell--desc">Carbs (g)</th>
-            <th>Protein (g)</th>
-            <th>Sodium (mg)</th>
+            <th class="data-table__sortable-cell data-table__sortable-cell--desc">术语名称</th>
             <th>
                 <i class="mdi mdi-comment-text"></i>
-                <span>Comments</span>
+                <span>术语描述</span>
             </th>
+            <th>更新</th>
         </tr>
         </thead>
 
         <tbody>
-        <tr class="data-table__selectable-row data-table__selectable-row--is-selected">
-            <td></td>
-            <td>Frozen yogurt</td>
-            <td>159</td>
-            <td>6.0</td>
-            <td>24</td>
-            <td>4.0</td>
-            <td>87</td>
-            <td>Lorem ipsum</td>
-        </tr>
-
-        <tr class="data-table__selectable-row">
-            <td></td>
-            <td>Ice cream sandwich</td>
-            <td>237</td>
-            <td>9.0</td>
-            <td>37</td>
-            <td>4.3</td>
-            <td>129</td>
-            <td>Lorem ipsum</td>
-        </tr>
+            <tr class="data-table__selectable-row data-table__selectable-row--is-selected" ng-repeat="glossaryItem in vm.items">
+                <td></td>
+                <td>{{glossaryItem.title}}</td>
+                <td>{{glossaryItem.description}}</td>
+                <td>
+                    <lx-button lx-type="raised" lx-size="m" lx-color="white" ng-click="vm.update(glossaryItem)">更新</lx-button>
+                </td>
+            </tr>
         </tbody>
     </table>
+
+    <ui-view></ui-view>
 </div>

@@ -1,56 +1,60 @@
-<div class="row">
+<div class="row glossaryFilterView">
 <!--Left Filter Panel-->
 <div class="col-4 glossaryFilter">
-    <span class="fs-title display-block mb">术语类别</span>
+    <div class="card">
+        <span class="fs-title display-block mb">术语类别</span>
 
-    <div class="divider divider--dark"></div>
+        <div class="divider divider--dark"></div>
 
-    <ul class="list mt++">
-        <li class="list-row list-row--multi-line list-row--has-separator">
-            <div class="list-row__primary">
-                <img src="../../assets/images/placeholder/1-square.jpg" width="40" height="40" class="img-round">
-            </div>
+        <ul class="list mt++">
+            <li class="list-row list-row--multi-line list-row--has-separator" ng-repeat="category in vm.categories">
+                <div class="list-row__primary">
+                    <img src="../../assets/images/placeholder/1-square.jpg" width="40" height="40" class="img-round">
+                </div>
 
-            <div class="list-row__content">
+                <div class="list-row__content">
                 <span class="display-block">
-                    <a ui-sref="glossary.glossaryFilter.glossaryTable">Two-line item</a>
+                    <a ui-sref="glossary.glossaryFilter.glossaryTable">{{category.title}}</a>
                 </span>
-                <span class="display-block fs-body-1 tc-black-2">Secondary text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam massa quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
-            </div>
+                <span class="display-block fs-body-1 tc-black-2">
+                    {{category.description}}
+                </span>
+                </div>
 
-            <div class="list-row__secondary">
-                <lx-icon lx-id="information" lx-size="xs" lx-color="grey" lx-type="flat"></lx-icon>
-            </div>
-        </li>
-        <li class="list-row list-row--multi-line list-row--has-separator">
-            <div class="list-row__primary">
-                <img src="../../assets/images/placeholder/2-square.jpg" width="40" height="40" class="img-round">
-            </div>
+                <div class="list-row__secondary">
+                    <lx-icon lx-id="information" lx-size="xs" lx-color="grey" lx-type="flat"></lx-icon>
+                </div>
+            </li>
+            <!--<li class="list-row list-row&#45;&#45;multi-line list-row&#45;&#45;has-separator">-->
+            <!--<div class="list-row__primary">-->
+            <!--<img src="../../assets/images/placeholder/2-square.jpg" width="40" height="40" class="img-round">-->
+            <!--</div>-->
 
-            <div class="list-row__content">
-                <span class="display-block">Two-line item</span>
-                <span class="display-block fs-body-1 tc-black-2">Secondary text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam massa quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
-            </div>
+            <!--<div class="list-row__content">-->
+            <!--<span class="display-block">Two-line item</span>-->
+            <!--<span class="display-block fs-body-1 tc-black-2">Secondary text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam massa quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>-->
+            <!--</div>-->
 
-            <div class="list-row__secondary">
-                <lx-icon lx-id="information" lx-size="xs" lx-color="grey" lx-type="flat"></lx-icon>
-            </div>
-        </li>
-        <li class="list-row list-row--multi-line list-row--has-separator">
-            <div class="list-row__primary">
-                <img src="../../assets/images/placeholder/3-square.jpg" width="40" height="40" class="img-round">
-            </div>
+            <!--<div class="list-row__secondary">-->
+            <!--<lx-icon lx-id="information" lx-size="xs" lx-color="grey" lx-type="flat"></lx-icon>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--<li class="list-row list-row&#45;&#45;multi-line list-row&#45;&#45;has-separator">-->
+            <!--<div class="list-row__primary">-->
+            <!--<img src="../../assets/images/placeholder/3-square.jpg" width="40" height="40" class="img-round">-->
+            <!--</div>-->
 
-            <div class="list-row__content">
-                <span class="display-block">Two-line item</span>
-                <span class="display-block fs-body-1 tc-black-2">Secondary text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam massa quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
-            </div>
+            <!--<div class="list-row__content">-->
+            <!--<span class="display-block">Two-line item</span>-->
+            <!--<span class="display-block fs-body-1 tc-black-2">Secondary text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam massa quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>-->
+            <!--</div>-->
 
-            <div class="list-row__secondary">
-                <lx-icon lx-id="information" lx-size="xs" lx-color="grey" lx-type="flat"></lx-icon>
-            </div>
-        </li>
-    </ul>
+            <!--<div class="list-row__secondary">-->
+            <!--<lx-icon lx-id="information" lx-size="xs" lx-color="grey" lx-type="flat"></lx-icon>-->
+            <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
 </div>
 <!--Right List Panel-->
 <ui-view class="col-8"></ui-view>
