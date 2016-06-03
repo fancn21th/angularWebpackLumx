@@ -1,5 +1,6 @@
+<div class="row">
 <!--Left Filter Panel-->
-<div flex-item="6" class="mt++ glossaryFilter">
+<div class="col-4 glossaryFilter">
     <span class="fs-title display-block mb">术语类别</span>
 
     <div class="divider divider--dark"></div>
@@ -11,7 +12,9 @@
             </div>
 
             <div class="list-row__content">
-                <span class="display-block">Two-line item</span>
+                <span class="display-block">
+                    <a ui-sref="glossary.glossaryFilter.glossaryTable">Two-line item</a>
+                </span>
                 <span class="display-block fs-body-1 tc-black-2">Secondary text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam massa quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
             </div>
 
@@ -50,4 +53,5 @@
     </ul>
 </div>
 <!--Right List Panel-->
-<ui-view></ui-view>
+<ui-view class="col-8"></ui-view>
+</div>
