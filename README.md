@@ -1,4 +1,4 @@
-# angularWebpackLumx
+# Angular + Angular UI Router + Webpack + Lumx
 
 ## Purpose
 Acting as boilerplate of angular + ui router + webpack + lumx for Hongtoo Frontend Team 
