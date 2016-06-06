@@ -21,7 +21,7 @@ class glossaryTable{
 
 
         function update(categoryItem){
-            $state.go('glossary.glossaryFilter.glossaryTable.addGlossaryItem');
+            $state.go('glossary.glossaryFilter.glossaryTable.addGlossaryItem', null, {reload: true});
         }
     }
 }
