@@ -8,6 +8,8 @@ const MODULE_NAME = 'app',
 var libs = [
     require("../vendor/lumx"),
     require('angular-ui-router'),
+    require('../components/test/test').default,
+    require('../components/test2/test2').default,
     glossaryFilter
 ];
 
