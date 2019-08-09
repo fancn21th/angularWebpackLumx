@@ -1,7 +1,12 @@
 # Angular + Angular UI Router + Webpack + Lumx
 
+## Dev Environment
+
+- `nodejs 6.x or less`
+
 ## Purpose
-Acting as boilerplate of angular + ui router + webpack + lumx for Hongtoo Frontend Team 
+
+Acting as boilerplate of angular + ui router + webpack + lumx for Hongtoo Frontend Team
 
 ## Quick start
 
@@ -14,8 +19,7 @@ Two Steps Only:
 
 ### Next version's rework:
 
- - Complete guidance of component-based architecture.
- - Complete guidance of large-scale JS SPA architecture.
- - Complete TDD 
- - Complete Clean Code.
-
+- Complete guidance of component-based architecture.
+- Complete guidance of large-scale JS SPA architecture.
+- Complete TDD
+- Complete Clean Code.
